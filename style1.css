@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #E3F2FD, #E1F5FE);
+    color: #333;
+}
+.header {
+    background-color: #fcfcfd;
+    color: rgb(10, 10, 10);
+    text-align: center;
+    padding: 20px 0;
+}
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.carousel-images {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+}
+.carousel img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+.carousel-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    pointer-events: all;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5em;
+}
+.section {
+    padding: 40px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #004aad;
+}
+.footer {
+    text-align: center;
+    background-color: #004aad;
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+}

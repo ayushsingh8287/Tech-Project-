@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Facilities</title>
+    <link rel="stylesheet" href="style1.css">
+ </head>
+ <body>
+    <div class="header">
+        <h1>Engineering Facilities</h1>
+        <p>Empowering Education with Excellence</p>
+    </div>
+
+    <!-- Image Carousel -->
+    <div class="carousel">
+        <div class="carousel-images">
+            <!-- Duplicate images to allow seamless scrolling -->
+            <img src="https://vcertk.com/wp-content/uploads/2024/03/item7-1.png" alt="Computer Lab">
+            <img src="https://vcertk.com/wp-content/uploads/2024/03/item4.png" alt="Mechanical Workshop">
+            <img src="https://vcertk.com/wp-content/uploads/2024/03/item2.png" alt="Library">
+            <img src="https://vcertk.com/wp-content/uploads/2024/05/DSC_3485-1024x683.jpg" alt="Campus View">
+            <img src="https://vcertk.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-07-at-4.10.05-PM.jpeg" alt="Campus View">
+            <img src="https://vcertk.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-07-at-4.10.03-PM-1.jpeg" alt="Campus View">
+            <img src="https://vcertk.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-07-at-4.10.01-PM-1-1024x682.jpeg" alt="Campus View">
+            <img src="https://vcertk.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-07-at-4.10.01-PM-2-1024x682.jpeg" alt="Campus View">
+            <img src="https://vcertk.com/wp-content/uploads/2024/03/item6-1.png" alt="Campus View">
+            <img src="https://vcertk.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-07-at-4.10.01-PM-1024x682.jpeg" alt="Campus View">
+            <img src="https://vcertk.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-07-at-4.10.04-PM.jpeg" alt="Campus View">
+            <img src="https://vcertk.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-07-at-4.10.05-PM.jpeg" alt="Campus View">
+            
+            <!-- Duplicate images to create an infinite effect -->
+            <img src="https://vcertk.com/wp-content/uploads/2024/03/item7-1.png" alt="Computer Lab">
+            <img src="https://vcertk.com/wp-content/uploads/2024/03/item4.png" alt="Mechanical Workshop">
+            <img src="https://vcertk.com/wp-content/uploads/2024/03/item2.png" alt="Library">
+            <img src="https://vcertk.com/wp-content/uploads/2024/05/DSC_3485-1024x683.jpg" alt="Campus View">
+            <img src="https://vcertk.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-07-at-4.10.05-PM.jpeg" alt="Campus View">
+            <img src="https://vcertk.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-07-at-4.10.03-PM-1.jpeg" alt="Campus View">
+            <img src="https://vcertk.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-07-at-4.10.01-PM-1-1024x682.jpeg" alt="Campus View">
+            <img src="https://vcertk.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-07-at-4.10.01-PM-2-1024x682.jpeg" alt="Campus View">
+            <img src="https://vcertk.com/wp-content/uploads/2024/03/item6-1.png" alt="Campus View">
+            <img src="https://vcertk.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-07-at-4.10.01-PM-1024x682.jpeg" alt="Campus View">
+            <img src="https://vcertk.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-07-at-4.10.04-PM.jpeg" alt="Campus View">
+            <img src="https://vcertk.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-07-at-4.10.05-PM.jpeg" alt="Campus View">
+        </div>
+        <div class="carousel-buttons">
+            <button id="prev">❮</button>
+            <button id="next">❯</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Anti-Ragging Policy</h2>
+        <p>
+            Our college strictly follows anti-ragging policies to ensure a safe and secure environment for all students. We have a dedicated committee to address and resolve any concerns.
+        </p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Vaish College Of Engineering. All Rights Reserved.</p>
+    </div>
+
+     <script>
+        const carousel = document.querySelector('.carousel-images');
+        const images = document.querySelectorAll('.carousel img');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+
+        let currentIndex = 0;
+        const totalImages = images.length / 2; // Since we duplicated the images
+        const intervalTime = 5000;
+
+        // Function to show the image based on the index
+        function showImage(index) {
+            const offset = -index * 100;
+            carousel.style.transform = `translateX(${offset}%)`;
+        }
+
+        // Automatic scrolling
+        function autoScroll() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
+        }
+
+        // Set interval for automatic scrolling
+        setInterval(autoScroll, intervalTime);
+
+        // Navigation buttons functionality
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalImages - 1;
+            showImage(currentIndex);
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex < totalImages - 1) ? currentIndex + 1 : 0;
+            showImage(currentIndex);
+        });
+    </script> 
+</body>
+</html>
